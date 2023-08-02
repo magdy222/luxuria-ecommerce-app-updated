@@ -42,9 +42,9 @@ const SignUp = () => {
   return (
     <div className='container mx-auto my-24 flex justify-center justify-items-center 
     drop-shadow-lg w-[400px] h-[340px] border border-white 
-    bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  rounded-lg' >
+    bg-gray-100 rounded-lg shadow-2xl' >
         <div className='flex flex-col justify-center justify-items-center'>
-           <form className='p-5 text-white' >
+           <form className='p-5 text-black' >
            
             <div className='flex justify-center justify-items-center '>
                 <label htmlFor='name' className='px-9'>Name</label> 
@@ -63,12 +63,12 @@ const SignUp = () => {
             </div>
           </form>
           <div className='flex justify-center gap-3'> 
-          <button className='bg-white w-24 h-7 container mx-auto my-3 
-          hover:text-emerald-500 rounded-md text-blue-500' onClick={handleSignUp} disabled={loading || currentUser}>Sign up</button>
-          <button className='bg-white w-24 h-7 container mx-auto my-3 
-             hover:text-emerald-500 rounded-md text-blue-500' onClick={handleLogOut} disabled={loading || !currentUser}>Log out</button>
+          <button className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white w-28 h-7 container
+             mx-auto my-3 hover:text-black rounded-md' onClick={handleSignUp} disabled={loading || currentUser}>Sign up</button>
+          <button className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white w-28 h-7 container
+             mx-auto my-3 hover:text-black rounded-md' onClick={handleLogOut} disabled={loading || !currentUser}>Log out</button>
           </div>
-            <h6 className='container mx-auto text-center'>Already have an account <Link className='text-white underline' to={'/login'}>Login</Link> </h6>
+            <h6 className='container mx-auto text-center'>Already have an account <Link className='text-blue-500 underline' to={'/login'}>Login</Link> </h6>
         </div>
     </div>
   )

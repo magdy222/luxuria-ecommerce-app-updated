@@ -38,9 +38,9 @@ const Login = () => {
 return(
   <div className='container mx-auto my-24 flex justify-center justify-items-center 
     drop-shadow-lg w-[380px] h-[340px] border border-white 
-    bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  rounded-lg' >
+    bg-gray-100 shadow-2xl  rounded-lg' >
         <div className='flex flex-col justify-center justify-items-center'>
-           <form className='p-5 text-white'>
+           <form className='p-5 text-black'>
             <div className='flex justify-center justify-items-center'>
                 <label htmlFor='email' className='px-9'>Email</label> 
                 <input type='email' ref={emailRef}  className='text-center border-2 hover:border-blue-300 
@@ -52,11 +52,11 @@ return(
                  outline-none rounded-md text-black' placeholder='password'/>
             </div>
           </form>
-            <button className='bg-white w-28 h-7 container mx-auto my-3 
-             hover:text-emerald-500 rounded-md text-blue-500' 
+            <button className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white w-28 h-7 container
+             mx-auto my-3 hover:text-black rounded-md' 
               onClick={handleSignIn} disabled={loading || currentUser}>Login</button>
             <GoogleButton className='container mx-auto my-6' onClick={handleSignWithPopUp}/>
-            <h6 className='container mx-auto text-center'>Create an account <Link className='text-white underline' to={'/register'}>Register</Link> </h6>
+            <h6 className='container mx-auto text-center'>Create an account <Link className='text-blue-500 underline' to={'/register'}>Register</Link> </h6>
         </div>
     </div>
     )

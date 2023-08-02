@@ -56,6 +56,9 @@ const NavBar= () => {
           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
         العربية
         </button>
+        <div  className='flex items-center justify-center px-10'>
+            <CiSearch/>
+        </div>
     </div>
         <div>
             <Link to={'/'}><h2 className='uppercase text-2xl font-bold first-letter:text-pink-500 text-black no-underline'>{t('title')}</h2></Link>
@@ -81,11 +84,7 @@ const NavBar= () => {
               </Link>
             </div>
         </div>
-        <div className='flex items-center justify-center  pb-5 '>
-            <input type='search' placeholder='search' onChange={handleSearch}
-            className='text-center border-2 hover:border-blue-300 outline-none rounded-sm  mx-2'/>
-            <CiSearch/>
-        </div>
+
     </div>
         <h2 className='text-center py-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
          text-white text-lg uppercase'>{t("bar")}</h2>

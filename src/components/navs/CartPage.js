@@ -30,12 +30,12 @@ function CartPage() {
 
     return (
         <div className='container mx-auto my-10 min-h-screen'>
-          <h2 className='text-3xl font-bold mb-5 flex justify-center items-center gap-3'>Shopping Cart 
+          <h2 className='text-3xl font-bold mb-10 lg:mb-5 flex justify-center items-center gap-3'>Shopping Cart 
           <AiOutlineShoppingCart  style={{ fontSize: '32px' }}/></h2>
-          <div className='grid grid-cols-4 gap-4'>
-            <div className='col-span-3'>
+          <div className='grid grid-cols-4 gap-4 '>
+            <div className='col-span-3 '>
              {cart?.map((product)=>(
-                <div className='flex items-center justify-between border-b-2 pb-2'>
+                <div className='flex items-center justify-between px-2 border-b-2 pb-2'>
                 <div className='flex items-center '>
                   <img src={product.image} alt='Product' className='mr-4 w-24 h-24' />
                   <div>
@@ -50,9 +50,9 @@ function CartPage() {
                   <button className='px-2 py-1 bg-gray-200 rounded-full ml-2' 
                   onClick={()=> dispatch(increaseQuantity(product))}>+</button>
                 </div>
-                <div className='text-right'>
+                <div className='text-center px-2'>
                   <p className='font-bold'>{(product.price * product.quantity)}$</p>
-                  <button className='text-red-500 hover:text-red-700' 
+                  <button className='text-red-500 hover:text-red-700 text-center' 
                   onClick={()=> dispatch(removeFromCart(product))}>Remove</button>
                 </div>
               </div>
@@ -60,7 +60,7 @@ function CartPage() {
               ))}
             </div>
             <div className='col-span-1'>
-              <div className='bg-gray-100 p-2'>
+              <div className='bg-gray-100 p-2 '>
                 <h2 className='font-bold text-xl mb-2'>Summary</h2>
                 <div className='flex justify-between mb-2'>
                   <p className='sm:text-lg'>Total:</p>

@@ -65,10 +65,8 @@ const SignUp = () => {
           <div className='flex justify-center gap-3'> 
           <button className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white w-28 h-7 container
              mx-auto my-3 hover:text-black rounded-md' onClick={handleSignUp} disabled={loading || currentUser}>Sign up</button>
-          <button className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white w-28 h-7 container
-             mx-auto my-3 hover:text-black rounded-md' onClick={handleLogOut} disabled={loading || !currentUser}>Log out</button>
           </div>
-            <h6 className='container mx-auto text-center'>Already have an account <Link className='text-blue-500 underline' to={'/login'}>Login</Link> </h6>
+            <h6 className='container mx-auto text-center pt-2'>Already have an account <Link className='text-blue-500 underline' to={'/login'}>Login</Link> </h6>
         </div>
     </div>
   )

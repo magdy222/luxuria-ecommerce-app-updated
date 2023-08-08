@@ -56,7 +56,7 @@ return(
              mx-auto my-3 hover:text-black rounded-md' 
               onClick={handleSignIn} disabled={loading || currentUser}>Login</button>
             <GoogleButton className='container mx-auto my-6' onClick={handleSignWithPopUp}/>
-            <h6 className='container mx-auto text-center'>Create an account <Link className='text-blue-500 underline' to={'/register'}>Register</Link> </h6>
+            <h6 className='container mx-auto text-center pt-2'>Create an account <Link className='text-blue-500 underline' to={'/register'}>Register</Link> </h6>
         </div>
     </div>
     )

@@ -20,10 +20,6 @@ const NavBar= () => {
   const currentUser = useAuth()
   const [loading ,setLoading] = useState(false)
 
-  const handleSearch = (event)=>{
-    dispatch(searchByName(event.target.value))
-  }
-
   async function handleLogOut () {
     setLoading(true)
     try{
@@ -70,8 +66,10 @@ const NavBar= () => {
           <Link to={'/login'}><h4 className='px-2  text-black no-underline'>{t("login")}</h4></Link>
             </div>) : <p className='px-3 text-cyan-600'>{currentUser.email}</p>
         }
-        <button className='bg-white px-3 mx-3 hover:text-red-500 custom-cursor' 
-        onClick={handleLogOut} disabled={loading || !currentUser}>{t("logout")}</button>
+        {!currentUser ? "" : 
+                 <button className='bg-white px-3 mx-3 hover:text-red-500 custom-cursor' 
+                 onClick={handleLogOut} disabled={loading || !currentUser}>{t("logout")}</button>}
+
 
             <div className='flex items-center justify-center relative'>
               <Link to={'/cart'}>

@@ -30,7 +30,7 @@ function ProductDetails() {
           <p className="text-gray-700 mb-4">
                 {product.description}
           </p>
-          <p className="text-gray-700 mb-4">Price :${product.price}</p>
+          <p className="text-red-700 mb-4"><span className='px-2'>Price :</span>{product.price} $</p>
           <div className="mb-4">
             <h2 className="text-lg font-medium mb-2">Product Features</h2>
             <ul className="list-disc list-inside">

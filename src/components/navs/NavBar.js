@@ -83,8 +83,8 @@ const NavBar= () => {
         </div>
 
     </div>
-      <div className='w-full'>
-       <h2 className='text-center py-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+      <div className="mx-auto">
+       <h2 className='text-center py-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-full
          text-white text-lg uppercase'>{t("bar")}</h2>
       </div>
     </div>

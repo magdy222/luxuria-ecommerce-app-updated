@@ -1,8 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import {GoogleButton} from 'react-google-button'
-import { async } from '@firebase/util'
-import { signIn, useAuth, signWithPopUp } from '../../firebase'
+import { signIn, useAuth} from '../../firebase'
 
 
 const Login = () => {
@@ -24,20 +22,10 @@ const Login = () => {
     }
     setLoading(false)
   }
-  
-  async function handleSignWithPopUp (){
-    setLoading(true)
-    try{
-      await signWithPopUp()
-      navigate('/')
-    }catch(error){
-      alert('Error!')
-    }
-    setLoading(false)
-  }
+
 return(
   <div className='container mx-auto my-24 flex justify-center justify-items-center 
-    drop-shadow-lg w-[380px] h-[340px] border border-white 
+    drop-shadow-lg w-[360px] h-[280px] md:w-[380px] md:h-[340px] border border-white 
     bg-gray-100 shadow-2xl  rounded-lg' >
         <div className='flex flex-col justify-center justify-items-center'>
            <form className='p-5 text-black'>
@@ -55,7 +43,6 @@ return(
             <button className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white w-28 h-7 container
              mx-auto my-3 hover:text-black rounded-md' 
               onClick={handleSignIn} disabled={loading || currentUser}>Login</button>
-            <GoogleButton className='container mx-auto my-6' onClick={handleSignWithPopUp}/>
             <h6 className='container mx-auto text-center pt-2'>Create an account <Link className='text-blue-500 underline' to={'/register'}>Register</Link> </h6>
         </div>
     </div>

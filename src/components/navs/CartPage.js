@@ -35,15 +35,14 @@ function CartPage() {
           <div className='grid grid-cols-4 gap-4 '>
             <div className='col-span-3 '>
              {cart?.map((product)=>(
-                <div className='flex items-center justify-between px-2 border-b-2 pb-2'>
+                <div className='flex flex-col md:flex-row items-center justify-between px-2 border-b-2 pt-2 pb-2'>
                 <div className='flex items-center '>
                   <img src={product.image} alt='Product' className='mr-4 w-24 h-24' />
-                  <div>
-                    <h3 className='w-32 h-36 flex flex-wrap'>{product.title}</h3>
-                    <p className='text-gray-600'>${product.price}</p>
+                  <div className='flex justify-center items-center px-2'>
+                    <h3 className='w-32 h-36 flex flex-wrap '>{product.title}</h3>
                   </div>
                 </div>
-                <div className='flex items-center justify-center text-center'>
+                <div className='flex items-center justify-center text-center px-10'>
                   <button className='px-2 py-1 bg-gray-200 rounded-full mr-2'
                   onClick={()=> dispatch(decreaseQuantity(product))}>-</button>
                   <span className='px-2'>{product.quantity}</span>
@@ -59,15 +58,15 @@ function CartPage() {
 
               ))}
             </div>
-            <div className='col-span-1'>
-              <div className='bg-gray-100 p-2 '>
-                <h2 className='font-bold text-xl mb-2'>Summary</h2>
+            <div className='col-span-1 ml-[-30px] sm:ml-0'>
+              <div className='bg-gray-100 p-3 w-[100px] sm:w-[180px]'>
+                <h2 className='font-bold text-l lg:xl mb-2'>Summary</h2>
                 <div className='flex justify-between mb-2'>
-                  <p className='sm:text-lg'>Total:</p>
-                    {+totalPrice}
+                  <p className='sm:text-lg'>Total:  </p>
+                   <span className='px-2'>{+totalPrice}$ </span> 
                 </div>
-                <div className='flex flex-col justify-between items-center  flex-nowrap'>
-                  <button className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-5 rounded-full block text-center mt-5'
+                <div className='flex flex-col justify-between items-center flex-nowrap'>
+                  <button className='bg-red-500 hover:bg-red-700 text-white lg:font-bold py-2 px-5 rounded-full block text-center mt-5'
                   onClick={()=> dispatch(clear())}>
                     Clear All
                   </button>

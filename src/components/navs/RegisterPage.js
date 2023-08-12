@@ -41,7 +41,7 @@ const SignUp = () => {
 
   return (
     <div className='container mx-auto my-24 flex justify-center justify-items-center 
-    drop-shadow-lg w-[400px] h-[340px] border border-white 
+    drop-shadow-lg w-[360px] h-[280px] md:w-[380px] md:h-[340px] border border-white 
     bg-gray-100 rounded-lg shadow-2xl' >
         <div className='flex flex-col justify-center justify-items-center'>
            <form className='p-5 text-black' >
@@ -57,7 +57,7 @@ const SignUp = () => {
                 outline-none rounded-md mb-5 text-black text-md font-bold' placeholder='email'/>
             </div>
             <div>
-                <label htmlFor='password' className='p-6'>Password</label>
+                <label htmlFor='password' className='p-5 md:p-6'>Password</label>
                 <input type='password' autoComplete='off' ref={passwordRef} className='text-center border-2 hover:border-blue-300 
                 outline-none rounded-md  text-black font-bold' placeholder='password'/>
             </div>

@@ -33,8 +33,8 @@ const NavBar= () => {
   }
 
   return (
-    <div className='pt-2 w-full bg-white'>
-    <div className='grid sm:grid-cols-1 md:grid-cols-3 gap-5 lg:gap-10  justify-items-center py-2 '>
+    <div className='pt-2 w-full bg-white '>
+    <div className='grid sm:grid-cols-1 md:grid-cols-3 gap-5 lg:gap-10  justify-items-center py-2  '>
       <div className='flex gap-2 '>
         <button
         onClick={()=>{i18n.changeLanguage("en")}}

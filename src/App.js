@@ -12,10 +12,6 @@ import SignUp from './components/navs/RegisterPage';
 import {ToastContainer} from 'react-toastify'
 import { useTranslation } from 'react-i18next';
 import { useAuth } from './firebase';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { ThreeDots } from 'react-loader-spinner'
-
 
 
 
@@ -26,32 +22,10 @@ function App() {
 
   const currentUser = useAuth()
 
- const [loading, setLoading] = useState(false)
-
- useEffect(()=>{
-  setLoading(true)
-  setTimeout(()=>{
-     setLoading(false)
-  },3000)
- })
 
   return (
   
     <BrowserRouter>
-     {
-      loading ? 
-      <div className="flex justify-center items-center h-[500px]">
-      <ThreeDots 
-        height="120" 
-        width="120" 
-        radius="9"
-        color="purple" 
-        ariaLabel="three-dots-loading"
-        wrapperStyle={{}}
-        wrapperClassName=""
-        visible={true}
-       />
-    </div> :
     <div className="App" style={{ direction: t('dir') }}>
     <ToastContainer/>
       <NavBar/>
@@ -63,11 +37,8 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='product/:productId' element={<ProductDetails/>}/>
     </Routes>
-      
       <Footer/>
     </div>
-     }
-
     </BrowserRouter>
   );
 }
